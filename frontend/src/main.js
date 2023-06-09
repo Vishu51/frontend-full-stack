@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faPlane } from '@fortawesome/free-solid-svg-icons'
+import vuetify from './plugins/vuetify'
 
 /* add icons to the library */
 library.add(faUserSecret, faPlane)
@@ -25,5 +26,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')
