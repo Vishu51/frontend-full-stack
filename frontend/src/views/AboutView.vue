@@ -7,7 +7,7 @@
     </v-app-bar>
 
     <v-main style="background-color: #00254d;">
-      <!-- Add your content section here -->
+      <!-- Add your content section here -->  
       <FlightBooking></FlightBooking>
     </v-main>
 
