@@ -1,7 +1,13 @@
 <template>
   <div>
     <v-container>
-      <h1 class="text-center white--text">Search your trip</h1>
+      <h1 class="text-center white--text">
+        Search your trip
+        <span>
+          <!-- <img width="50" src="../assets/img/travel-logo.jpg" alt=""> -->
+        </span>
+      </h1>
+
       <v-tabs v-model="currentItem">
         <v-tab>One Way</v-tab>
         <v-tab>Round Trip</v-tab>
@@ -46,17 +52,27 @@
         </v-tab-item>
       </v-tabs-items>
     </v-container>
-    <div class="d-flex justify-center justify-lg-space-around mt-8">
-      <c-card
-        v-for="item in cardItem"
-        :key="item.id"
-        :cardTitle="item.cardTitle"
-        :cardSubTitle="item.cardSubTitle"
-        :cardTitle1="item.cardTitle1"
-        :cardTitle2="item.cardTitle2"
-        :cardBtnShare="item.cardBtnShare"
-        :cardBtnExplore="item.cardBtnExplore"
-      />
+    <div class="cards-container mt-8">
+      <v-row class="pl-12">
+        <v-col
+          v-for="item in cardItem"
+          :key="item.id"
+          cols="12"
+          sm="6"
+          md="4"
+          lg="4"
+        >
+          <c-card
+            :cardTitle="item.cardTitle"
+            :cardImage="item.src"
+            :cardSubTitle="item.cardSubTitle"
+            :cardTitle1="item.cardTitle1"
+            :cardTitle2="item.cardTitle2"
+            :cardBtnShare="item.cardBtnShare"
+            :cardBtnExplore="item.cardBtnExplore"
+          />
+        </v-col>
+      </v-row>
     </div>
   </div>
 </template>
@@ -71,6 +87,7 @@ export default {
       cardItem: [
         {
           id: 1,
+          src: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
           cardTitle: "Top 10 Australian beaches to visit",
           cardSubTitle: "Number 10",
           cardTitle1: "White haven Beach",
@@ -80,6 +97,7 @@ export default {
         },
         {
           id: 2,
+          src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg",
           cardTitle: "Top 10 Australian beaches to visit",
           cardSubTitle: "Number 10",
           cardTitle1: "White haven Beach",
@@ -89,6 +107,57 @@ export default {
         },
         {
           id: 3,
+          src: "https://cdn.vuetifyjs.com/images/cards/road.jpg",
+          cardTitle: "Top 10 Australian beaches to visit",
+          cardSubTitle: "Number 10",
+          cardTitle1: "White haven Beach",
+          cardTitle2: "White sunday Island, Whitsunday Islands",
+          cardBtnShare: "Share",
+          cardBtnExplore: "Explore",
+        },
+        {
+          id: 4,
+          src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg",
+          cardTitle: "Top 10 Australian beaches to visit",
+          cardSubTitle: "Number 10",
+          cardTitle1: "White haven Beach",
+          cardTitle2: "White sunday Island, Whitsunday Islands",
+          cardBtnShare: "Share",
+          cardBtnExplore: "Explore",
+        },
+        {
+          id: 5,
+          src: "https://cdn.vuetifyjs.com/images/cards/house.jpg",
+          cardTitle: "Top 10 Australian beaches to visit",
+          cardSubTitle: "Number 10",
+          cardTitle1: "White haven Beach",
+          cardTitle2: "White sunday Island, Whitsunday Islands",
+          cardBtnShare: "Share",
+          cardBtnExplore: "Explore",
+        },
+        {
+          id: 6,
+          src: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+          cardTitle: "Top 10 Australian beaches to visit",
+          cardSubTitle: "Number 10",
+          cardTitle1: "White haven Beach",
+          cardTitle2: "White sunday Island, Whitsunday Islands",
+          cardBtnShare: "Share",
+          cardBtnExplore: "Explore",
+        },
+        {
+          id: 7,
+          src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg",
+          cardTitle: "Top 10 Australian beaches to visit",
+          cardSubTitle: "Number 10",
+          cardTitle1: "White haven Beach",
+          cardTitle2: "White sunday Island, Whitsunday Islands",
+          cardBtnShare: "Share",
+          cardBtnExplore: "Explore",
+        },
+        {
+          id: 8,
+          src: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
           cardTitle: "Top 10 Australian beaches to visit",
           cardSubTitle: "Number 10",
           cardTitle1: "White haven Beach",
@@ -108,4 +177,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.cards-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+</style>

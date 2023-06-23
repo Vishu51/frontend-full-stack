@@ -91,7 +91,7 @@ export default {
           console.log('from signup page:', res.data.message);
           console.log('from signup page:', res.data.token);
           localStorage.setItem('token', res.data.token);
-          this.$router.push('/about')
+          this.$router.push('/')
         } else {
           console.log('No data found');
         }

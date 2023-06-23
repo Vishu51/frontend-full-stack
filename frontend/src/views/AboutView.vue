@@ -1,21 +1,21 @@
 <template>
-  <v-app>
+  <div>
     <v-app-bar app>
       <v-toolbar-title>{{ companyName }}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn color="primary" dark>{{ isLoggedIn ? "Logout" : "Login" }}</v-btn>
     </v-app-bar>
 
-    <v-main style="background-color: #00254d;">
+    <div class="" style="background-color: #00254d;">
       <!-- Add your content section here -->  
       <FlightBooking></FlightBooking>
-    </v-main>
+    </div>
 
     <v-footer app dark>
       <!-- Add your footer content here -->
       <span>&copy; {{ currentYear }} {{ companyName }}. All rights reserved.</span>
     </v-footer>
-  </v-app>
+  </div>
 </template>
 
 <script>

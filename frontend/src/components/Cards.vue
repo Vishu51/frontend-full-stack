@@ -3,7 +3,7 @@
     <v-img
       class="white--text align-end"
       height="200px"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+      :src="cardImage"
     >
       <v-card-title>{{ cardTitle }}</v-card-title>
     </v-img>
@@ -33,6 +33,10 @@
 export default {
   name: "CustomCard",
   props: {
+    cardImage: {
+      type: String,
+      default: "Card-Image",
+    },
     cardTitle: {
       type: String,
       default: "Default",

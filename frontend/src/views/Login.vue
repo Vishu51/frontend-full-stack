@@ -85,7 +85,6 @@ export default {
         .post("http://localhost:8000/users/login", body)
         .then((res) => {
           if (res.data && res.status === 200) {
-            console.log("Emailresponseeeeeeeeeee:", res.data.message);
             localStorage.setItem("token", res.data.token);
             this.$router.push("/about");
           } else {
